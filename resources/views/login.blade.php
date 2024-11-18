@@ -12,8 +12,7 @@
     <div class="bg-white rounded-lg p-6 w-96 shadow-md">
         <h2 class="text-2xl font-bold text-gray-800 mb-4">LOGIN</h2>
         <form id="login-form" method="GET">
-            <!-- Laravel CSRF Token -->
-            @csrf
+
             <div class="mb-4">
                 <input
                     type="text"

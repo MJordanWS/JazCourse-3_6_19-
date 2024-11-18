@@ -17,7 +17,6 @@ document.getElementById('login-form').addEventListener('submit', function (event
     }
 });
 
-// Fungsi toggle password visibility
 function togglePassword() {
     const passwordInput = document.getElementById('password');
     const passIcon = document.getElementById('pass-icon');
