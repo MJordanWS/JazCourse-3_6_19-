@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class Pembelajaran extends Model
 {
     protected $fillable = [
-        'paket_belajar_id',
+        'paketbelajar_id',
         'image',
         'name',
         'description',

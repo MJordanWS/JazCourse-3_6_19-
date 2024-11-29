@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('pembelajarans', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
-            $table->foreignId('paket_belajar_id');
+            $table->foreignId('paketbelajar_id');
             $table->string('image');
             $table->string('name');
             $table->string('description');

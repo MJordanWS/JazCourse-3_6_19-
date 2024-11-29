@@ -23,7 +23,7 @@ class PembelajaranResource extends Resource
     {
         return $form
             ->schema([
-                Forms\Components\Select::make('paket_belajar_id')
+                Forms\Components\Select::make('paketbelajar_id')
                     ->relationship('paketbelajar', 'name')
                     ->required(),
                 Forms\Components\FileUpload::make('image')
@@ -52,6 +52,7 @@ class PembelajaranResource extends Resource
             ->actions([
                 Tables\Actions\DeleteAction::make(),
                 Tables\Actions\EditAction::make(),
+                Tables\Actions\ViewAction::make(),
             ])
             ->bulkActions([
                 Tables\Actions\BulkActionGroup::make([

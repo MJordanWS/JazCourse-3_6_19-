@@ -40,91 +40,46 @@
 
     <!-- Paket Belajar Section -->
     <section id="paketbelajar" class="px-10 py-24 text-center">
-        <div>
-            <span class="text-lg font-semibold text-black">Ayo Berlangganan Sekarang!</span>
-            <h1 class="text-3xl font-bold text-yellow-500">Paket Belajar</h1>
-        </div>
-        <div class="flex flex-wrap gap-6 justify-center mt-12">
-            <!-- Paket SD -->
+    <div>
+        <span class="text-lg font-semibold text-black">Ayo Berlangganan Sekarang!</span>
+        <h1 class="text-3xl font-bold text-yellow-500">Paket Belajar</h1>
+    </div>
+    <div class="flex flex-wrap gap-6 justify-center mt-12">
+        @foreach ($paketBelajars as $paket)
             <div class="bg-yellow-500 p-6 rounded-lg w-80 text-center">
                 <div class="h-36 mb-4">
-                    <img src="assets\images\background_paket_sd-removebg-preview (1).png" alt="Paket SD" class="w-full h-full object-contain mx-auto">
+                    <img src="{{ asset('storage/' . $paket->image) }}" alt="{{ $paket->name }}" class="w-full h-full object-contain mx-auto">
                 </div>
-                <div class="text-black text-lg font-semibold mb-1">Paket SD</div>
-                <span class="text-black text-xl font-semibold">Rp. 200.000,00</span>
+                <div class="text-black text-lg font-semibold mb-1">{{ $paket->name }}</div>
+                <span class="text-black text-xl font-semibold">Rp. {{ number_format($paket->price, 0, ',', '.') }}</span>
                 <a href="#paketbelajar" class="mt-4 inline-block px-6 py-2 border-2 border-black text-black font-medium rounded-full hover:bg-white">Berlangganan</a>
-            </div>
 
-            <!-- Paket SMP -->
-            <div class="bg-yellow-500 p-6 rounded-lg w-80 text-center">
-                <div class="h-36 mb-4">
-                    <img src="assets\images\asset smp (2).png" alt="Paket SMP" class="w-full h-full object-contain mx-auto">
-                </div>
-                <div class="text-black text-lg font-semibold mb-1">Paket SMP</div>
-                <span class="text-black text-xl font-semibold">Rp. 350.000,00</span>
-                <a href="#paketbelajar" class="mt-4 inline-block px-6 py-2 border-2 border-black text-black font-medium rounded-full hover:bg-white">Berlangganan</a>
             </div>
+        @endforeach
+    </div>
+</section>
 
-            <!-- Paket SMA -->
-            <div class="bg-yellow-500 p-6 rounded-lg w-80 text-center">
-                <div class="h-36 mb-4">
-                    <img src="assets\images\asset sma.png" alt="Paket SMA" class="w-full h-full object-contain mx-auto">
-                </div>
-                <div class="text-black text-lg font-semibold mb-1">Paket SMA</div>
-                <span class="text-black text-xl font-semibold">Rp. 500.000,00</span>
-                <a href="#paketbelajar" class="mt-4 inline-block px-6 py-2 border-2 border-black text-black font-medium rounded-full hover:bg-white">Berlangganan</a>
-            </div>
-        </div>
-    </section>
 
     <!-- Pembelajaran Section -->
-    <section id="pembelajaran" class="px-10 py-24 text-center">
-        <div>
-            <span class="text-lg font-semibold text-black">Ayo Berlangganan</span>
-            <h1 class="text-3xl font-bold text-yellow-500">Belajar Murah dan Simple</h1>
-        </div>
-        <div class="mt-12 flex flex-wrap gap-12 justify-center items-center">
-            <!-- Bahasa Indonesia -->
-            <div class="flex flex-col md:flex-row items-center">
-                <img src="assets\images\aset mk3 (1).png" alt="Bahasa Indonesia" class="w-80 h-80 object-cover">
-                <div class="text-left p-4 max-w-lg">
-                    <h2 class="text-xl font-semibold text-black">Bahasa Indonesia</h2>
-                    <p class="text-gray-600 mt-2">Pembelajaran Bahasa Indonesia bertujuan untuk membantu siswa memahami dan menguasai kemampuan berbahasa secara lisan dan tulisan...</p>
-                    <a href="#paketbelajar" class="mt-4 inline-block px-6 py-2 border-2 border-black text-black font-medium rounded-full hover:bg-orange-600 hover:text-white">Berlangganan</a>
-                </div>
-            </div>
-
-            <!-- Bahasa Inggris -->
-            <div class="flex flex-col md:flex-row items-center">
-                <img src="assets\images\aset mk3 (2).png" alt="Bahasa Inggris" class="w-80 h-80 object-cover">
-                <div class="text-left p-4 max-w-lg">
-                    <h2 class="text-xl font-semibold text-black">Bahasa Inggris</h2>
-                    <p class="text-gray-600 mt-2">Pembelajaran Bahasa Inggris dirancang untuk membantu siswa menguasai keterampilan berbahasa yang meliputi mendengarkan, berbicara...</p>
-                    <a href="#paketbelajar" class="mt-4 inline-block px-6 py-2 border-2 border-black text-black font-medium rounded-full hover:bg-orange-600 hover:text-white">Berlangganan</a>
-                </div>
-            </div>
-
-            <!-- Matematika -->
-            <div class="flex flex-col md:flex-row items-center">
-                <img src="assets\images\aset mk3 (3).png" alt="Matematika" class="w-80 h-80 object-cover">
-                <div class="text-left p-4 max-w-lg">
-                    <h2 class="text-xl font-semibold text-black">Matematika</h2>
-                    <p class="text-gray-600 mt-2">Pembelajaran Matematika bertujuan untuk membangun pemahaman logis, analitis, dan pemecahan masalah pada siswa...</p>
-                    <a href="#paketbelajar" class="mt-4 inline-block px-6 py-2 border-2 border-black text-black font-medium rounded-full hover:bg-orange-600 hover:text-white">Berlangganan</a>
-                </div>
-            </div>
-
-            <!-- IPA -->
-            <div class="flex flex-col md:flex-row items-center">
-                <img src="assets\images\aset mk3 (4).png" alt="Ilmu Pengetahuan Alam" class="w-80 h-80 object-cover">
-                <div class="text-left p-4 max-w-lg">
-                    <h2 class="text-xl font-semibold text-black">Ilmu Pengetahuan Alam</h2>
-                    <p class="text-gray-600 mt-2">Pembelajaran Ilmu Pengetahuan Alam bertujuan untuk mengembangkan pemahaman siswa tentang fenomena alam...</p>
-                    <a href="#paketbelajar" class="mt-4 inline-block px-6 py-2 border-2 border-black text-black font-medium rounded-full hover:bg-orange-600 hover:text-white">Berlangganan</a>
-                </div>
+<section id="pembelajaran" class="px-10 py-24 text-center">
+    <div>
+        <span class="text-lg font-semibold text-black">Ayo Belajar Sekarang!</span>
+        <h1 class="text-3xl font-bold text-yellow-500">Pilihan Materi Pembelajaran</h1>
+    </div>
+    <div class="mt-12 flex flex-wrap gap-12 justify-center items-center">
+        @foreach ($pembelajarans as $pembelajaran)
+        <div class="flex flex-col md:flex-row items-center">
+            <img src="{{ asset('storage/' . $pembelajaran->image) }}" alt="{{ $pembelajaran->name }}" class="w-80 h-80 object-cover">
+            <div class="text-left p-4 max-w-lg">
+                <h2 class="text-xl font-semibold text-black">{{ $pembelajaran->name }}</h2>
+                <p class="text-gray-600 mt-2">{{ strip_tags($pembelajaran->description) }}</p>
+                <a href="#paketbelajar" class="mt-4 inline-block px-6 py-2 border-2 border-black text-black font-medium rounded-full hover:bg-orange-600 hover:text-white">Berlangganan</a>
             </div>
         </div>
-    </section>
+        @endforeach
+    </div>
+</section>
+
 
     <!-- Footer -->
     <footer class="bg-gray-900 text-white py-8 text-center">
